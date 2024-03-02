@@ -20,4 +20,5 @@ async def add_task(task: STaskAdd = Depends()) -> STaskId:
 @router.get("/")
 async def get_tasks() -> list[STask]:
     tasks = await TaskRepository.get_task()
+
     return tasks
